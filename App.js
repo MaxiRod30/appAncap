@@ -1,15 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View,} from 'react-native';
+import Home from './src/screens/Home';
+import {colors} from './src/global/colors'
+import CustomCalendar from './src/components/CustomCalendar';
 
 export default function App() {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text>Comiste trolo, putoooo!!!!</Text>
-        <Text>Comiste trolo, putoooo!!!!</Text>
-        <Text>Comiste trolo, putoooo!!!!</Text>
-        <Text>Comiste trolo, putoooo!!!!</Text>
-        <StatusBar style="auto" />
+        <Home />
+        <CustomCalendar />
       </View>
     </SafeAreaView>
   );
@@ -17,9 +16,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
-    backgroundColor: 'rgba(255,0,0,0.5)',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop:"10%",
+    backgroundColor: colors.lightGray,
   },
 });

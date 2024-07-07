@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Primer turno",
+        "description":"22:00 pm - 6:00 am"
+    },
+    {
+        "id": 2,
+        "title": "Segundo turno",
+        "description":"6:00 am - 14:00 pm"
+    },
+    {
+        "id": 3,
+        "title": "Tercer turno",
+        "description":"14:00 pm - 22:00 pm"
+    }
+]

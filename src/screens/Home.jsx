@@ -1,16 +1,19 @@
-import {View } from 'react-native'
-import React, { Component } from 'react'
-import Header from '../components/Header'
+import { StyleSheet, Text, View , Button} from 'react-native'
+import React from 'react'
 
 
-export class Home extends Component {
-    render() {
-        return (
-            <View >
-                <Header  />
-            </View>
-        )
-    }
+const Home = ({navigation}) => {
+    return (
+        <View >
+            <Text>Home acaaaacacacacasdasdsad</Text>
+            <Button
+                title="Go to ItemListAlarms"
+                onPress={() => navigation.navigate('ItemListAlarms')}
+            />
+        </View>
+    )
 }
 
 export default Home
+
+const styles = StyleSheet.create({})

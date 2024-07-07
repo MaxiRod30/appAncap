@@ -2,7 +2,12 @@ import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { colors } from '../global/colors'
 
+import { useDispatch, useSelector } from "react-redux";
+
 const Header = () => {
+
+  const title = useSelector((state)=> state.title.value.titleSelected)
+
   return (
     <View style={styles.container}>
 
@@ -10,6 +15,7 @@ const Header = () => {
         style={styles.logoAncap}
         source={require('../../assets/ancap-logo.png')}
       />
+      <Text style={styles.text}>{title}</Text>
 
     </View>
   )

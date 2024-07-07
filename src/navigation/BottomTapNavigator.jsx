@@ -10,7 +10,8 @@ import CartHor3StackNavigator from './CartHor3StackNavigator'
 import Header from '../components/Header'
 import { colors } from '../global/colors'
 
-import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome5 , FontAwesome6, Fontisto} from "@expo/vector-icons";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator()
 
@@ -32,7 +33,7 @@ const BottomTapNavigator = () => {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <View>
-                                <FontAwesome5 name="store" size={24} color={focused ? "black" : colors.lightGray} />
+                                <FontAwesome6 name="house-user" size={24} color={focused ? "black" : colors.lightGray} />
                             </View>
                         );
                     },
@@ -45,7 +46,7 @@ const BottomTapNavigator = () => {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <View>
-                                <FontAwesome5 name="shopping-cart" size={24} color={focused ? "black" : colors.lightGray} />
+                                <Fontisto name="night-clear" size={24} color={focused ? "black" : colors.lightGray} />
                             </View>
                         );
                     },
@@ -58,11 +59,7 @@ const BottomTapNavigator = () => {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <View>
-                                <FontAwesome5
-                                    name="receipt"
-                                    size={24}
-                                    color={focused ? "black" : colors.lightGray}
-                                />
+                                <MaterialCommunityIcons name="weather-sunny" size={34} color={focused ? "black" : colors.lightGray}/>
                             </View>
                         );
                     },
@@ -75,11 +72,7 @@ const BottomTapNavigator = () => {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <View>
-                                <FontAwesome5
-                                    name="receipt"
-                                    size={24}
-                                    color={focused ? "black" : colors.lightGray}
-                                />
+                                <MaterialCommunityIcons name="weather-sunset" size={32} color={focused ? "black" : colors.lightGray} />
                             </View>
                         );
                     },

@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { SafeAreaView, StyleSheet, Platform, StatusBar} from 'react-native';
+import { SafeAreaView, StyleSheet, Platform, StatusBar } from 'react-native';
 import { colors } from './src/global/colors'
 
 import { useFonts } from 'expo-font';
@@ -8,6 +8,8 @@ import Navigator from './src/navigation/Navigator';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { Provider } from "react-redux";
+import store from "./src/store";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +31,9 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Navigator />
+      <Provider store={store}>
+        <Navigator />
+      </Provider>
     </SafeAreaView>
   );
 }

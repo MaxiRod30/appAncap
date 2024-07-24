@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 import { colors } from '../global/colors.js'
 
-import alarmas from '../data/alarmas.json'
+import alarmas from '../data/users.json'
 import Search from '../components/Search.jsx';
 import AlarmItem from '../components/AlarmItem.jsx';
 

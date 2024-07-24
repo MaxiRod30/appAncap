@@ -6,19 +6,30 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import Navigator from './src/navigation/Navigator';
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { initSQLiteDB } from "./src/persistence"; 
 
 import { Provider } from "react-redux";
 import store from "./src/store";
 
-const Stack = createNativeStackNavigator();
+//***Creacion de tabla ***
+(async ()=> {
+  try {
+    const response = await initSQLiteDB()
+    console.log({responseCreatingDB: response})
+    console.log("DB Inicilized")
+  } catch (error) {
+    console.log({errorCreatingDB: error})
+  }
+})()
+//*******************
 
 export default function App() {
 
   //*** Configuracion de fuente ***
 
   const [fontsLoaded, fontError] = useFonts({
-    'RubikMonoOne': require('./assets/fonts/RubikMonoOne-Regular.ttf'),
+    RubikMonoOne: require('./assets/fonts/RubikMonoOne-Regular.ttf'),
+    Josefin: require("./assets/fonts/JosefinSans-Regular.ttf")
   });
 
   const onLayoutRootView = useCallback(async () => {

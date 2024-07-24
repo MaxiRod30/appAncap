@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "user": "maxi",
+        "password": "1234",
+        "name": "Maximiliano",
+        "lastName": "Gonzalez",
+        "email": "asdasd@gmail.com",
+        "phone": "123456789",
+        "produccion": "4",
+        "image": "https://www.google.com.ar/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+        "isActive": true,
+        "alarmsConfig":[
+            {
+                "id": 1,
+                "title": "Alarma1",
+                "description":"Configuracion de alarma",
+                "turno":"1",
+                "time":"6:05 am",
+                "isActive":true
+            },
+            {
+                "id": 2,
+                "title": "Alarma2",
+                "description":"Configuracion de alarma",
+                "turno":"2",
+                "time":"6:10 am",
+                "isActive":true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "user": "jose",
+        "password": "1234",
+        "name": "Jose",
+        "lastName": "Gonzalez",
+        "email": "",
+        "phone": "",
+        "produccion": "1",
+        "image": "https://www.google.com.ar/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+        "isActive": true,
+        "alarmsConfig":[
+            {
+                "id": 1,
+                "title": "Alarma1",
+                "description":"Configuracion de alarma",
+                "turno":"1",
+                "time":"6:05 am",
+                "isActive":true
+            },
+            {
+                "id": 2,
+                "title": "Alarma2",
+                "description":"Configuracion de alarma",
+                "turno":"2",
+                "time":"6:10 am",
+                "isActive":true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "user": "juan",
+        "password": "1234",
+        "name": "Juan",
+        "lastName": "Gonzalez",
+        "email": "",
+        "phone": "",
+        "produccion": "2",
+        "image": "https://www.google.com.ar/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+        "isActive": true,
+        "alarmsConfig":[
+            {
+                "id": 1,
+                "title": "Alarma1",
+                "description":"Configuracion de alarma",
+                "turno":"1",
+                "time":"6:05 am",
+                "isActive":true
+            },
+            {
+                "id": 2,
+                "title": "Alarma2",
+                "description":"Configuracion de alarma",
+                "turno":"2",
+                "time":"6:10 am",
+                "isActive":true
+            }
+        ]
+    }
+]

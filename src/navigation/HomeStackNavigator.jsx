@@ -13,10 +13,7 @@ export default function HomeStackNavigator() {
             screenOptions={{headerShown: false}}
           >
             <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen
-              name="ItemListAlarms"
-              component={ItemListAlarms}
-            />
+
           </Stack.Navigator>
   );
 }

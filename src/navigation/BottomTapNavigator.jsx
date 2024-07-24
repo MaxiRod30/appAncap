@@ -1,16 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeStackNavigator from './HomeStackNavigator'
 import CartHor1StackNavigator from './CartHor1StackNavigator'
 import CartHor2StackNavigator from './CartHor2StackNavigator'
 import CartHor3StackNavigator from './CartHor3StackNavigator'
-
+import MyProfileStackNavigator from './MyProfileStackNavigator'
 
 import Header from '../components/Header'
 import { colors } from '../global/colors'
 
-import { FontAwesome5 , FontAwesome6, Fontisto} from "@expo/vector-icons";
+import { FontAwesome5, FontAwesome6, Fontisto } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator()
@@ -59,7 +58,7 @@ const BottomTapNavigator = () => {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <View>
-                                <MaterialCommunityIcons name="weather-sunny" size={34} color={focused ? "black" : colors.lightGray}/>
+                                <MaterialCommunityIcons name="weather-sunny" size={34} color={focused ? "black" : colors.lightGray} />
                             </View>
                         );
                     },
@@ -73,6 +72,23 @@ const BottomTapNavigator = () => {
                         return (
                             <View>
                                 <MaterialCommunityIcons name="weather-sunset" size={32} color={focused ? "black" : colors.lightGray} />
+                            </View>
+                        );
+                    },
+                }}
+            />
+            <Tab.Screen
+                name="My Buttom Profile"
+                component={MyProfileStackNavigator}
+                options={{
+                    tabBarIcon: ({ focused }) => {
+                        return (
+                            <View>
+                                <FontAwesome5
+                                    name="user-alt"
+                                    size={24}
+                                    color={focused ? "black" : colors.lightGray}
+                                />
                             </View>
                         );
                     },

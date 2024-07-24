@@ -9,7 +9,7 @@ const Header = () => {
   const title = useSelector((state)=> state.title.value.titleSelected)
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container}> 
 
       <Image
         style={styles.logoAncap}

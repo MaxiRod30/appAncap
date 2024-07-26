@@ -73,8 +73,6 @@ const ImageSelector = ({ navigation }) => {
                 quality: 0.2,
             });
 
-            //console.log(result);
-
             if (!result.canceled) {
                 setImage(`data:image/jpeg;base64,${result.assets[0].base64}`);
             }
@@ -103,23 +101,23 @@ const ImageSelector = ({ navigation }) => {
                         resizeMode="cover"
                         source={{ uri: image || imageFromBase?.image }}
                     />
-                    <AddButton title="Take another photo" onPress={pickImage} />
+                    <AddButton title="Toma otra foto" onPress={pickImage} />
 
                     <AddButton
-                        title="Pick photo from gallery"
+                        title="Foto de la galeria"
                         onPress={pickLibraryImage}
                     />
 
-                    <AddButton title="Confirm photo" onPress={confirmImage} />
+                    <AddButton title="Confirmar Foto" onPress={confirmImage} />
                 </>
             ) : (
                 <>
                     <View style={styles.containerPhoto}>
                         <Text>No photo to show...</Text>
                     </View>
-                    <AddButton title="Take a photo" onPress={pickImage} />
+                    <AddButton title="Toma una foto!" onPress={pickImage} />
                     <AddButton
-                        title="Pick photo from gallery"
+                        title="Foto de la galeria"
                         onPress={pickLibraryImage}
                     />
                 </>
@@ -148,10 +146,12 @@ const styles = StyleSheet.create({
         marginVertical: 20,
         height: 200,
         width: 200,
-        borderRadius: 100
+        borderRadius: 100,
+        marginTop: 20
     },
     containerPhoto: {
-        marginVertical: 20,
+        marginTop: 20,
+        marginVertical: 50,
         height: 200,
         width: 200,
         borderRadius: 100,

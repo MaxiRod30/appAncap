@@ -2,7 +2,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "../screens/Home";
-import ItemListAlarms from "../screens/ItemListAlarms";
+
 
 const Stack = createNativeStackNavigator();
 

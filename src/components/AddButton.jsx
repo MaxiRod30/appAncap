@@ -5,11 +5,10 @@ import { colors } from "../global/colors";
 const AddButton = ({
     title = "",
     onPress = () => {},
-    color = colors.green700,
 }) => {
     return (
         <Pressable
-            style={{ ...styles.button, backgroundColor: color }}
+            style={{ ...styles.button }}
             onPress={onPress}
         >
             <Text style={styles.text}>{title}</Text>
@@ -23,14 +22,16 @@ const styles = StyleSheet.create({
     button: {
         width: "80%",
         borderWidth: 1,
-        backgroundColor: colors.green700,
+        backgroundColor: colors.skyBlue,
+        marginTop: 20,
         justifyContent: "center",
+        padding: 10,
+        borderRadius: 6,
         alignItems: "center",
         padding: 8
     },
     text: {
-        fontFamily: "Josefin",
+        color: colors.white,
         fontSize: 18,
-        color: colors.green300,
     },
 });

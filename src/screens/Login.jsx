@@ -8,7 +8,7 @@ import SubmitButton from "../components/SubmitButton";
 import { useSignInMutation } from "../services/authService";
 import { useDispatch } from "react-redux";
 import { setUser } from "../fetures/User/UserSlice";
-
+import { truncateSessionTable } from '../persistence';
 import { insertSession } from "../persistence";
 
 const Login = ({ navigation }) => {
@@ -18,17 +18,29 @@ const Login = ({ navigation }) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const dispatch = useDispatch()
-
   const [triggerSignIn, result] = useSignInMutation()
 
+  const cleanDb = async () => {
+    try {
+      const response = await truncateSessionTable()
+      console.log(response)
+      dispatch(clearUser())
+    } catch (error) {
+      console.log({errorSignOutDB: error})
+    }
+  }
+
   useEffect(() => {
+
     if (result?.data && result.isSuccess) {
+      
+      cleanDb()
+      
       insertSession({
         email: result.data.email,
         localId: result.data.localId,
         token: result.data.idToken
       }).then((response) => {
-
         dispatch(
           setUser({
             email: result.data.email,

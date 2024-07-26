@@ -17,9 +17,9 @@ const Tab = createBottomTabNavigator()
 const BottomTapNavigator = () => {
     return (
         <Tab.Navigator
-            screenOptions={({ route }) => ({
+            screenOptions={({ route, navigation}) => ({
                 header: () => {
-                    return <Header title={route.name} />;
+                    return <Header navigation={navigation} />;
                 },
                 tabBarShowLabel: false,
                 tabBarStyle: styles.tabBar,
@@ -94,7 +94,9 @@ const BottomTapNavigator = () => {
                     },
                 }}
             />
+        
         </Tab.Navigator>
+        
     );
 }
 

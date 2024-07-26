@@ -49,8 +49,8 @@ const MyProfile = ({navigation}) => {
         onPress={launchCamera}
         title={
           imageFromBase || imageCamera
-            ? "Modify profile picture"
-            : "Add profile picture"
+            ? "Modificar foto de perfil"
+            : "Agregar foto de perfil"
         }
       />
       <AddButton onPress={signOut} title="Sign out" />
@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
   img: {
     height: 200,
     width: 200,
-    borderRadius: 100
+    borderRadius: 100,
+    marginTop: 20
   },
   btn: {
     marginTop: 10,

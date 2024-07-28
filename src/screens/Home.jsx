@@ -12,7 +12,6 @@ const Home = () => {
         dispatch(setProd(itemValue))
     }
     const { prod } = useSelector((state) => state.auth.value);
-    console.log(prod)
 
     return (
         <View style={styles.container}>

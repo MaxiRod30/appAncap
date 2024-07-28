@@ -12,12 +12,20 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCalendarsUsageDescription": "This app uses the calendar to schedule reminders.",
+        "NSRemindersUsageDescription": "This app uses reminders to notify you of important tasks."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "permissions": [
+          "SET_ALARM",
+          "VIBRATE"
+        ]
       }
     },
     "web": {

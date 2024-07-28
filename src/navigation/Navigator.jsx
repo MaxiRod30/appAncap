@@ -30,7 +30,7 @@ const Navigator = () => {
             }))
         }
       } catch (error) {
-        console.log(error)
+        Alert.alert(error)
       }
     })()
   })

@@ -23,10 +23,9 @@ const MyProfile = ({navigation}) => {
       const signOut = async () => {
         try {
           const response = await truncateSessionTable()
-          console.log(response)
           dispatch(clearUser())
         } catch (error) {
-          console.log({errorSignOutDB: error})
+          Alert.alert({errorSignOutDB: error})
         }
       }
 

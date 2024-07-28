@@ -24,7 +24,6 @@ const ImportImage = () => {
         }
 
         const pickerResult = await ImagePicker.launchImageLibraryAsync();
-        // console.log(pickerResult)
 
         if (pickerResult.cancelled === true) {
             return;

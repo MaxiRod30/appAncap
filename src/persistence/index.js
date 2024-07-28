@@ -14,7 +14,6 @@ export const initSQLiteDB = () => {
             );
         });
     });
-    console.log("retorna la promesa")
     return promise
 }
 // crear la session
@@ -29,7 +28,6 @@ export const insertSession = ({email, localId, token})=>{
         );
       });
     });
-    console.log("Insertando registro promesa");
     return promise;
 }
 
@@ -45,7 +43,6 @@ export const getSession = () => {
         );
       });
     });
-    console.log("Obteniendo la session");
     return promise;
 }
 
@@ -61,6 +58,5 @@ export const truncateSessionTable = () => {
         );
       });
     });
-    console.log("Borrando la session");
     return promise;
 }

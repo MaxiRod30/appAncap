@@ -4,12 +4,16 @@ export const infoSlice = createSlice({
     name: "info", 
     initialState: {
         value: {
-            alarmSelected: "",
+            alarm: "",
+            user:"",
+            horario:"",
         }
     }, 
     reducers: {
         setAlarmSelected: (state, action)=>{
-            state.value.alarmSelected = action.payload;
+            state.value.alarm = action.payload;
+            state.value.user = action.payload;
+            state.value.horario = action.payload;
         },
 
     }

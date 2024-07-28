@@ -23,10 +23,9 @@ const Login = ({ navigation }) => {
   const cleanDb = async () => {
     try {
       const response = await truncateSessionTable()
-      console.log(response)
       dispatch(clearUser())
     } catch (error) {
-      console.log({errorSignOutDB: error})
+      Alert.alert({errorSignOutDB: error})
     }
   }
 
@@ -49,7 +48,7 @@ const Login = ({ navigation }) => {
           })
         );
       }).catch(err => {
-        console.log(err)
+        Alert.alert(err)
       })
     }
   }, [result])

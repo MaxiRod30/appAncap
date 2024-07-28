@@ -9,7 +9,7 @@ const CartHor3StackNavigator = () => {
       initialRouteName="Horarios Turno 3"
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen name="CartHor1Screen" component={CartHor3} />
+      <Stack.Screen name="CartHor3Screen" component={CartHor3} />
     </Stack.Navigator>
   );
 }
